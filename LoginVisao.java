@@ -23,13 +23,16 @@ public class LoginVisao extends JFrame
         super("Tela de Login");
 
         JPanel painelNorte = new JPanel();
-        
+
         ImageIcon iconOriginal = new ImageIcon("image/logoVeterinario.png");
         Image imagemRedimensionada = iconOriginal.getImage().getScaledInstance(250, 250, Image.SCALE_SMOOTH);
         ImageIcon iconRedimensionado = new ImageIcon(imagemRedimensionada);
 
         JLabel lbImagem = new JLabel(iconRedimensionado);
-        getContentPane().add(painelNorte , BorderLayout.NORTH);
+
+        painelNorte.add(lbImagem);
+        getContentPane().add(painelNorte, BorderLayout.NORTH);
+
         getContentPane().add(centro = new PainelCentro(), BorderLayout.CENTER);
         getContentPane().add(sul = new PainelSul(), BorderLayout.SOUTH);
         
